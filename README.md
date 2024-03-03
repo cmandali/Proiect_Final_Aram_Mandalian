@@ -6,19 +6,21 @@ Project is a Behavior-Driven Development (BDD) test automation framework using t
 It is meant to test a demo shopping web page's functionalities using Python.
 
 Introduction
+
 The purpose of this project is to demonstrate how to use BDD testing, using POM with Python. 
 It includes feature files, step definition files, and page files representing classes of different pages of the web page.
 
 The tests cover various functionalities including login, page navigation, and shopping experience features.
 
 How to Enable
+
 To run the tests on your machine, follow these steps:
 
 Clone this repository to your local machine.
 
 Have Python installed on your machine. You can download Python from https://www.python.org/downloads/.
 
-Install the required dependencies typing pip in the terminal: pip install -r requirements.txt (requirments might be libraries, such behave, selenium, webdriver, html-formatter)
+Install the required dependencies typing pip in the terminal: pip install -r requirements.txt (requirments might be libraries, such as behave, selenium, webdriver, html-formatter).
 If you are using an IOS system, you might need to type pip3 instead of pip.
 
 Download the appropriate version of Chromedriver for your Chrome browser version. 
@@ -39,7 +41,11 @@ After running the tests, you can view the results in the HTML file created by op
 You may explore the project's structure.
 
 Requirements
+
 Python
+
 Selenium
+
 Chromedriver
+
 PyCharm or any Python IDE
