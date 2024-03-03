@@ -2,7 +2,7 @@
 **Proiect_Final_Aram_Mandalian**
 
 
-Project is a Behavior-Driven Development (BDD) test automation framework using the Page Object Model (POM) design pattern. 
+The project is a Behavior-Driven Development (BDD) test automation framework using the Page Object Model (POM) design pattern. 
 It is meant to test a demo shopping web page's functionalities using Python.
 
 Introduction
