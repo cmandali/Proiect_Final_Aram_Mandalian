@@ -24,7 +24,7 @@ Install the required dependencies typing pip in the terminal: pip install -r req
 If you are using an IOS system, you might need to type pip3 instead of pip.
 
 Download the appropriate version of Chromedriver for your Chrome browser version. 
-Find your chrome browser version by accesing its menu and navigate to About Google Chrome.
+Find your chrome browser version by accessing its menu and navigate to About Google Chrome.
 You can download Chromedriver from https://chromedriver.chromium.org/downloads.
 
 Place the chromedriver executable in a directory which is in your system's PATH environment variable.
