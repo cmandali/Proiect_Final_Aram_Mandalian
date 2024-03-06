@@ -63,9 +63,12 @@ After running the tests, you can view the results in the HTML file created by op
 You may want to print the test only on your terminal, or may want to run some scenarios or feature files and exclude other. Here is what you need to type in your terminal:
 
 behave - results will be printed in the terminal, no html will be updated or created.
-behave -n name_of_the_scenario - testing a specific scenario
-behave -i name_of_feature_file - testing a specific feature file
-behave -e name_of_feature_file - exclusion of a specific feature file from testing
+
+behave -n name_of_the_scenario - testing a specific scenario.
+
+behave -i name_of_feature_file - testing a specific feature file.
+
+behave -e name_of_feature_file - exclusion of a specific feature file from testing.
 
 
 
