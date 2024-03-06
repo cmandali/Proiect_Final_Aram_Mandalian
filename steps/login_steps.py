@@ -11,27 +11,37 @@ def step_impl(context):
     context.login_page.check_url("https://www.saucedemo.com/")
 
 
-@when('I enter "aramis" in the email input on the login page')
-def step_impl(context):
-    context.login_page.enter_name("aramis")
+@when('I enter "{unregistered_mail}" in the user-name field')
+def step_impl(context, unregistered_mail):
+    context.login_page.enter_name(unregistered_mail)
 
 
-@when('I enter a "password1234"')
-def step_impl(context):
-    context.login_page.enter_name("password1234")
+@when('I enter "{wrong_password}" in the password field')
+def step_impl(context, wrong_password):
+    context.login_page.enter_password(wrong_password)
 
 
-@when("I press the login button")
+@when("I click on Login")
 def step_impl(context):
     context.login_page.click_login()
 
 
-@when('I enter "{registered_mail}"')
+@then('I should see the "Username and password do not match any user in this service"')
+def step_impl(context):
+    context.login_page.check_error_text("Username and password do not match any user in this service")
+
+
+@when('I click on reset login fields')
+def step_impl(context):
+    context.login_page.reset_login_fields()
+
+
+@when('I re-enter "{registered_mail}" in the user-name field')
 def step_impl(context, registered_mail):
     context.login_page.enter_name(registered_mail)
 
 
-@when('I enter "{password}" in the password field')
+@when('I re-enter "{password}" in the password field')
 def step_impl(context, password):
     context.login_page.enter_password(password)
 
@@ -54,7 +64,3 @@ def step_impl(context):
 @then("The log_in fields should be visible")
 def step_impl(context):
     context.login_page.check_visibility_of_fields()
-
-
-
-
