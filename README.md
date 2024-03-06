@@ -7,11 +7,14 @@ It is meant to test a demo shopping web page's functionalities using Python.
 
 Introduction
 
+
 The purpose of this project is to demonstrate how to use BDD testing, using POM with Python. 
 It includes feature files, step definition files, and page files representing classes of different pages of the web page.
 
 
 How it works: 
+
+
 Step definition files which are in the folder named "steps" will implement every scenario that is scrapped from feature files.
 
 Implementation will be done by using objects and functions created in the files from the folder "pages". 
@@ -22,6 +25,7 @@ The tests cover various functionalities including login, page navigation, and sh
 
 
 How to Enable
+
 
 
 To run the tests on your machine, follow these steps:
@@ -42,7 +46,11 @@ Place the chromedriver executable in a directory which is in your system's PATH 
 Now open the project in PyCharm.
 You may use some other IDE of your preference
 
-In the features files, when you come across a Scenario Outline, feel free to replace the desired value in the 
+In the features files, when you come across a Scenario Outline, feel free to replace the desired value in the Example fields:
+
+ |  unregistered_mail|wrong_password|
+      | aramis@mail.ro| pass1234 |
+      
 
 In the terminal, you can run the tests by typing this command to generate a HTML report: behave -f html -o report_name.html
 
@@ -52,12 +60,13 @@ After running the tests, you can view the results in the HTML file created by op
 
 You may explore the project's structure.
 
+
 Requirements
 
-Python
+- Python
 
-Selenium
+- Selenium
 
-Chromedriver
+- Chromedriver
 
-PyCharm or any Python IDE
+- PyCharm or any Python IDE
