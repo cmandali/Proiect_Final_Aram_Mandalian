@@ -49,7 +49,8 @@ You may use some other IDE of your preference
 In the features files, when you come across a Scenario Outline, feel free to replace the desired value in the Example fields:
 
  |  unregistered_mail|wrong_password|
-      | aramis@mail.ro| pass1234 |
+ 
+      | aramis@mail.ro| pass1234 | - replace this values with the desired values
       
 
 In the terminal, you can run the tests by typing this command to generate a HTML report: behave -f html -o report_name.html
