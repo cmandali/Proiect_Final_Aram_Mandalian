@@ -10,6 +10,13 @@ Introduction
 The purpose of this project is to demonstrate how to use BDD testing, using POM with Python. 
 It includes feature files, step definition files, and page files representing classes of different pages of the web page.
 
+How it works: 
+Step definition files which are in the folder named "steps" will implement every scenario that is scrapped from feature files.
+
+Implementation will be done by using objects and functions created in the files from the folder "pages". 
+Each feature file has a corresponding file in the 2 mentioned folders above, named similar (example: 'items_sort.feature', 'items_sort_page.py', items_sort.steps')
+
+
 The tests cover various functionalities including login, page navigation, and shopping experience features.
 
 How to Enable
