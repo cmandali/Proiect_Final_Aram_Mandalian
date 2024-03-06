@@ -48,14 +48,14 @@ You may use some other IDE of your preference
 
 In the features files, when you come across a Scenario Outline, feel free to replace the desired value in the Example fields:
 
- |  unregistered_mail|wrong_password|
+ |  unregistered_mail | wrong_password |
  
-      | aramis@mail.ro| pass1234 | - replace this values with the desired values
+      | aramis@mail.ro | pass1234 | - replace this values with the desired values
       
 
-In the terminal, you can run the tests by typing this command to generate a HTML report: behave -f html -o report_name.html
+In the terminal, you can run the tests by typing this command to generate a HTML report: _behave -f html -o report_name.html_
 
-You may replace report_name.html with the name for the HTML report file of you.
+You may replace _report_name.html_ with the name for the HTML report file of you.
 
 After running the tests, you can view the results in the HTML file created by opening it in a browser.
 
@@ -64,11 +64,11 @@ You may want to print the test only on your terminal, or may want to run some sc
 
 _behave_ - results will be printed in the terminal, no html will be updated or created.
 
-behave -n name_of_the_scenario - testing a specific scenario.
+_behave -n name_of_the_scenario_ - testing a specific scenario.
 
-behave -i name_of_feature_file - testing a specific feature file.
+_behave -i name_of_feature_file_ - testing a specific feature file.
 
-behave -e name_of_feature_file - exclusion of a specific feature file from testing.
+_behave -e name_of_feature_file_ - exclusion of a specific feature file from testing.
 
 
 
