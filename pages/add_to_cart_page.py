@@ -24,6 +24,8 @@ class LoginPage(BasePage):
         actual_url = self.driver.current_url
         assert actual_url == expected_url, "Not the correct URL"
 
+    # if user-name or password fields have already a text typed, then below functions will clear, then type in the new text
+    
     def enter_name(self, user_name):
         if self.find(self.USER_NAME_BOX).get_attribute("value"):
             self.find(self.USER_NAME_BOX).clear()
