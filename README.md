@@ -5,14 +5,14 @@
 The project is a Behavior-Driven Development (BDD) test automation framework using the Page Object Model (POM) design pattern. 
 It is meant to test a demo shopping web page's functionalities using Python.
 
-Introduction
-
+**Introduction
+**
 
 The purpose of this project is to demonstrate how to use BDD testing, using POM with Python. 
 It includes feature files, step definition files, and page files representing classes of different pages of the web page.
 
 
-How it works: 
+**How it works: **
 
 
 Step definition files which are in the folder named "steps" will implement every scenario that is scrapped from feature files.
@@ -24,7 +24,7 @@ Each feature file has a corresponding file in the 2 mentioned folders above, nam
 The tests cover various functionalities including login, page navigation, and shopping experience features.
 
 
-How to Enable
+**How to Enable**
 
 
 
@@ -61,7 +61,7 @@ After running the tests, you can view the results in the HTML file created by op
 You may explore the project's structure.
 
 
-Requirements
+**Requirements**
 
 - Python
 
