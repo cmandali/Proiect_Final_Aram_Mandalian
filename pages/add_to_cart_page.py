@@ -88,7 +88,7 @@ class Add_to_Cart(LoginPage):
         self.find(self.MENU_BUTTON).click()
         self.find(self.ALL_ITEMS_BUTTON).click()
 
-# remove the desired quantity of items in your shooping cart    
+# remove the desired quantity of items from your shooping cart    
     def remove_items(self, item_removed):
         items_removed = self.find_more_than_one(self.REMOVE_ITEMS)
         for btn_remove in items_removed:
