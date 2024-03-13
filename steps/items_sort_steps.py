@@ -1,7 +1,7 @@
 from behave import *
 
 
-@given("I start from all items page")
+@given("I start from all items page!")
 def step_impl(context):
     context.items_sort_page.all_items_page()
 
@@ -14,6 +14,11 @@ def step_impl(context):
 @then("The first product is the one with the lowest price")
 def step_impl(context):
     context.items_sort_page.verify_sort_low_to_high()
+
+
+@given('I restart from all items page')
+def step_impl(context):
+    context.items_sort_page.all_items_page()
 
 
 @when("I sort the product from price high to low")
