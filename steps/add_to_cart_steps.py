@@ -61,3 +61,30 @@ def step_impl(context):
 def step_impl(context, total_number_of_items):
     context.add_to_cart_page.check_number_of_products(total_number_of_items)
 
+
+@given('I start from all items page')
+def step_impl(context):
+    context.add_to_cart_page.all_items_page()
+
+
+@when('I add "{desired_item}" in basket')
+def step_impl(context, desired_item):
+    context.add_to_cart_page.add_desired_items(desired_item)
+
+
+@when('I proceed to final checkout')
+def step_impl(context):
+    context.add_to_cart_page.navigate_to_shopping_basket()
+    context.add_to_cart_page.proceed_to_checkout()
+    context.add_to_cart_page.complete_form("Aram", "Khaciaturyan", "90210")
+    context.add_to_cart_page.continue_to_checkout()
+
+
+@when('I click on finish')
+def step_impl(context):
+    context.add_to_cart_page.confirm_order()
+
+
+@then('I should received confirmation message for my order')
+def step_impl(context):
+    context.add_to_cart_page.check_confirmation()
