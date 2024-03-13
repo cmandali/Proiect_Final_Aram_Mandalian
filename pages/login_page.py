@@ -1,7 +1,3 @@
-import time
-from pages.base_page import BasePage
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
@@ -15,6 +11,7 @@ class LoginPage(BasePage):
     PASSWORD_REQUIRED_TEXT = (By.XPATH, '//h3[text()="Epic sadface: Password is required"]')
     MENU_BUTTON = (By.ID, "react-burger-menu-btn")
     LOGOUT_BUTTON = (By.ID, "logout_sidebar_link")
+    ABOUT_BUTTON = (By.ID, 'about_sidebar_link')
 
     def open(self):
         self.driver.get(self.LOGIN_PAGE_URL)
@@ -24,7 +21,6 @@ class LoginPage(BasePage):
         actual_url = self.driver.current_url
         assert actual_url == expected_url, "Not the correct URL"
 
-# if user-name or password fields have already a text typed, then below functions will clear, then type in the new text
     def enter_name(self, user_name):
         if self.find(self.USER_NAME_BOX).get_attribute("value"):
             self.find(self.USER_NAME_BOX).clear()
@@ -45,9 +41,21 @@ class LoginPage(BasePage):
         login.click()
         time.sleep(2)
 
-    def log_out(self):
+    def check_error_text(self, expected_text):
+        error_text = self.find(self.ERROR_TEXT).text
+        assert expected_text in error_text
+
+    def reset_login_fields(self):
+        self.find(self.RESET_FIELDS).click()
+
+    def access_menu(self):
         self.find(self.MENU_BUTTON).click()
+
+    def log_out(self):
         self.find(self.LOGOUT_BUTTON).click()
+
+    def about_information(self):
+        self.find(self.ABOUT_BUTTON).click()
 
     def check_visibility_of_fields(self):
         assert self.find(self.USER_NAME_BOX).is_displayed(), "Fields are not visible"
