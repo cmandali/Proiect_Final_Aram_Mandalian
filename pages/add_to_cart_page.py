@@ -97,7 +97,8 @@ class Add_to_Cart(LoginPage):
             else:
                 pass
 
-        def add_desired_items(self, desired_item):
+# adding to shopping cart the product we want to buy
+    def add_desired_items(self, desired_item):
         items = self.find_more_than_one(self.ALL_ITEMS)
         for item in items:
             if desired_item.replace("-", " ").lower() in item.text.replace("-", " ").lower():
