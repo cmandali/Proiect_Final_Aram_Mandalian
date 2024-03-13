@@ -96,3 +96,16 @@ class Add_to_Cart(LoginPage):
                 btn_remove.click()
             else:
                 pass
+
+        def add_desired_items(self, desired_item):
+        items = self.find_more_than_one(self.ALL_ITEMS)
+        for item in items:
+            if desired_item.replace("-", " ").lower() in item.text.replace("-", " ").lower():
+                add_to_cart_button = item.find_element(By.XPATH, "//button[contains(text(),'Add to cart')]")
+                add_to_cart_button.click()
+
+    def confirm_order(self):
+        self.find(self.FINISH_BUTTON).click()
+
+    def check_confirmation(self):
+        assert "Thank you for your order" in self.find(self.CONFIRMATION_TEXT).text
